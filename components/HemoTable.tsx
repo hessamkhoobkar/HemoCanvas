@@ -9,7 +9,7 @@ interface Result {
 
 export default function HemoTable({ results }: { results: Result[] }) {
   return (
-    <div className="w-full flex flex-col justify-start items-start gap-4 mt-36">
+    <div className="w-full flex flex-col justify-start items-start gap-4 mt-24">
       <div className="w-full flex justify-start items-center gap-4">
         <span className="bg-neutral-950 text-white rounded-full p-4 w-1/4">
           Result date
