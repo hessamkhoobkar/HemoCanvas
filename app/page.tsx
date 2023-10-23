@@ -19,7 +19,7 @@ export default async function Home() {
       <Header />
       {results ? (
         <div className="w-full flex justify-start items-start gap-8">
-          <HemoChart />
+          <HemoChart results={results} />
           <CurrentResults
             platelets={results[0].platelets}
             hb={results[0].hb}
