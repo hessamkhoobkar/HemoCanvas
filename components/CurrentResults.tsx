@@ -1,3 +1,5 @@
+import ResultCard from "@/components/ResultCard";
+
 export default function CurrentResults({
   platelets,
   hb,
@@ -8,27 +10,16 @@ export default function CurrentResults({
   wbcs: number;
 }) {
   return (
-    <div className="flex-grow w-1/3 flex justify-start items-start flex-wrap gap-4">
-      <div className="w-5/12 p-4">
-        <h2 className="text-5xl font-bold">Current Blood Results</h2>
-      </div>
-      <div className="bg-white w-5/12 p-4 rounded-xl">
-        <h3>Platelets</h3>
-        <div className="bg-neutral-100 flex justify-center items-center rounded-xl">
-          <span className="text-4xl font-bold py-8">{platelets}</span>
+    <div className="flex-grow w-1/3 flex justify-start items-start flex-wrap gap-y-4">
+      <div className="flex-grow flex justify-start items-start gap-4">
+        <div className="w-1/2 p-2">
+          <h2 className="text-5xl font-bold">Current Blood Results</h2>
         </div>
+        <ResultCard title="Platelets" result={platelets} classes="w-1/2" />
       </div>
-      <div className="bg-white w-5/12 p-4 rounded-xl">
-        <h3>Hb</h3>
-        <div className="bg-neutral-100 flex justify-center items-center rounded-xl">
-          <span className="text-4xl font-bold py-8">{hb}</span>
-        </div>
-      </div>
-      <div className="bg-white w-5/12 p-4 rounded-xl">
-        <h3>WBCs</h3>
-        <div className="bg-neutral-100 flex justify-center items-center rounded-xl">
-          <span className="text-4xl font-bold py-8">{wbcs}</span>
-        </div>
+      <div className="flex-grow flex justify-start items-start gap-4">
+        <ResultCard title="HB" result={hb} classes="w-1/2" />
+        <ResultCard title="WBCs" result={wbcs} classes="w-1/2" />
       </div>
     </div>
   );
